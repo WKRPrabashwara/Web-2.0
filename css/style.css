@@ -208,6 +208,7 @@ header.scrolled .logo {
   cursor: pointer;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
+  margin-right: 1rem;
 }
 
 .toggle-btn:hover {
@@ -217,6 +218,7 @@ header.scrolled .logo {
 /* --------------- Showcase Area Styling --------------- */
 
 .showcase-area {
+  position: relative;
   padding: 120px 0;
   width: 100%;
   overflow: hidden;
@@ -224,7 +226,7 @@ header.scrolled .logo {
 
 .showcase-area .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 550px;
   height: calc(100vh - 120px);
   max-height: 600px;
   align-items: center;
@@ -241,6 +243,8 @@ header.scrolled .logo {
 .showcase-area .text {
   margin: 0.8rem 0;
   text-align: justify;
+  line-height: 1.8rem;
+  padding-right: 15px;
 }
 
 .cta {
@@ -262,6 +266,92 @@ header.scrolled .logo {
   font-size: 0.85rem;
   letter-spacing: 0.4px;
   text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--main-color-dark-1);
+}
+
+.btn.secondary-btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color-1);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0px;
+  border-bottom: 2.5px solid var(--main-color-2);
+  border-radius: 0px;
+  padding: 0.15rem 0;
+}
+
+.btn.secondary-btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  bottom: -2.5px;
+  left: 0;
+  background-color: var(--main-color-1);
+  transition: 0.3s ease-in-out;
+}
+
+.btn.secondary-btn:hover::before {
+  width: 100%;
+}
+
+.showcase-image {
+  position: relative;
+  width: 100%;
+  min-height: calc(100% + 120px);
+  background-image: linear-gradient(124deg,
+      var(--main-color-1),
+      var(--main-color-2));
+  margin-top: -120px;
+  border-radius: 0 0 80px 80px;
+}
+
+.showcase-image .person {
+  position: absolute;
+  width: 95%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dots {
+  width: 112px;
+}
+
+.square {
+  width: 70px;
+  transition: 0.3s opacity;
+}
+
+.showcase-square {
+  width: 70px;
+}
+
+.showcase-area .circle {
+  position: absolute;
+  width: 190px;
+  left: 0;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-area .dots {
+  position: absolute;
+  left: 100%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-area .showcase-square {
+  position: absolute;
+  left: 25%;
+  bottom: 120px;
+  transform: translate(-50%, -50%);
 }
 
 /* --------------- About Section Styling --------------- */
@@ -282,15 +372,12 @@ header.scrolled .logo {
 
 /* --------------- 1000px Screens --------------- */
 
-@media (max-width: 1000px) {
-}
+@media (max-width: 1000px) {}
 
 /* --------------- 768px Screens --------------- */
 
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
 
 /* --------------- 500px Screens --------------- */
 
-@media (max-width: 500px) {
-}
+@media (max-width: 500px) {}
